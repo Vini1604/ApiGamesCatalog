@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ApiGamesCatalog</name>
+    </assembly>
+    <members>
+        <member name="M:ApiGamesCatalog.Controllers.GamesController.GetGames(System.Int32,System.Int32)">
+            <summary>
+            Search by a page
+            </summary>
+            <remarks>
+            Cannot return a game without paging
+            </remarks>
+            <param name="page">Shows the page. Min 1</param>
+            <param name="elements">Shows number of element per page Min 1 and max 50</param>
+            <response code="200">Retrieve a list of games</response>
+            <response code="204">If there isn't a game</response>  
+        </member>
+        <member name="M:ApiGamesCatalog.Controllers.GamesController.GetGame(System.Guid)">
+            <summary>
+            Search by Id
+            </summary>
+            <param name="idGame">Game Id</param>
+            <response code="200">Retrive a game</response>
+            <response code="404">If there isn't a game</response>
+        </member>
+        <member name="M:ApiGamesCatalog.Controllers.GamesController.CreateGame(ApiGamesCatalog.Dtos.CreateUpdateGameDto)">
+            <summary>
+            Create a game
+            </summary>
+            <param name="createdGame">Information of a game</param>
+            <response code="200">Created successful</response>
+        </member>
+        <member name="M:ApiGamesCatalog.Controllers.GamesController.UpdateGame(System.Guid,ApiGamesCatalog.Dtos.CreateUpdateGameDto)">
+            <summary>
+            Update a game
+            </summary>
+            /// <param name="id">Game Id</param>
+            <param name="game">Updated data</param>
+            <response code="200">Updated successful</response>
+            <response code="404">If there isn't a game</response> 
+        </member>
+        <member name="M:ApiGamesCatalog.Controllers.GamesController.DeleteGame(System.Guid)">
+            <summary>
+            Delete a game
+            </summary>
+            /// <param name="id">Game Id</param>
+            <response code="200">Deleted successful</response>
+            <response code="404">If there isn't a game</response>  
+        </member>
+    </members>
+</doc>
